@@ -6,7 +6,7 @@ WORKDIR /usr/src/app
 ENV JAVA_HOME /usr/lib/jvm/java-1.8-openjdk
 
 # bash and socat are needed to run the polynote script
-RUN apk add --no-cache bash socat
+RUN apk add --no-cache bash
 
 # Install OpenJDK
 RUN apk add --no-cache openjdk8
@@ -37,11 +37,14 @@ RUN apk add python3-dev \
   & pip3 install jep jedi pyspark virtualenv matplotlib
 
 # Download and extract polynote
-RUN wget https://github.com/polynote/polynote/releases/download/0.2.8/polynote-dist.tar.gz \
-  && tar -zxvpf polynote-dist.tar.gz
+#RUN wget https://github.com/polynote/polynote/releases/download/0.2.8/polynote-dist.tar.gz \
+#  && tar -zxvpf polynote-dist.tar.gz
+RUN apk add --no-cache curl
+RUN curl -L https://github.com/polynote/polynote/releases/download/0.2.8/polynote-dist.tar.gz \
+  | tar -xzvpf -
 
-EXPOSE 8193
+COPY config.yml ./polynote/config.yml
 
-# polynote runs on 127.0.0.1:8192, so we use socat to map it to 0.0.0.0:8193
-# TODO: This is hacky, should have polynote itself run on 0.0.0.0
-CMD bash polynote/polynote & socat -d tcp-listen:8193,reuseaddr,fork tcp:127.0.0.1:8192
+EXPOSE 8192
+
+CMD bash polynote/polynote
