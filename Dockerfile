@@ -36,23 +36,6 @@ ENV PYTHONUNBUFFERED=1
 RUN apk add python3-dev \
   & pip3 install jep jedi pyspark virtualenv matplotlib
 
-# Clean gcc now that python dependencies are installled
-RUN apk del \
-    .build-deps \
-    gcc \
-    g++ \
-    libc-dev \
-    linux-headers \
-    mariadb-dev \
-    python3-dev \
-    postgresql-dev \
-    freetype-dev \
-    libpng-dev \
-    libxml2-dev \
-    libxslt-dev \
-    zlib-dev \
-  ;
-
 # Download and extract polynote
 RUN wget https://github.com/polynote/polynote/releases/download/0.2.8/polynote-dist.tar.gz \
   && tar -zxvpf polynote-dist.tar.gz
