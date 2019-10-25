@@ -5,6 +5,9 @@ WORKDIR /usr/src/app
 
 ENV JAVA_HOME /usr/lib/jvm/java-1.8-openjdk
 
+# Bash is needed to run the polynote script
+RUN apk add bash
+
 # Install OpenJDK
 RUN apk add openjdk8
 
@@ -24,8 +27,8 @@ RUN apk del .build-deps gcc musl-dev
 RUN wget https://github.com/polynote/polynote/releases/download/0.2.8/polynote-dist.tar.gz
 RUN tar -zxvpf polynote-dist.tar.gz
 
-RUN apk add bash
-
 WORKDIR /usr/src/app/polynote
+
+EXPOSE 8192
 
 CMD ["bash", "polynote"]
