@@ -14,6 +14,6 @@ When running this image, expose port `8192` to access the web application at: ht
 
 If you would like to mount a persistent volume for your notebooks, include the `-v` flag.
 
-**Example**: `docker run -p 8192:8192 -v poly-notes:/usr/src/app/polynote --name=polynote -d -t greglinscheid/polynote:latest`
+**Example**: `docker run -p 8192:8192 -v poly-notes:/usr/src/app/polynote/notebooks --name=polynote -d -t greglinscheid/polynote:latest`
 
 For convenience, this repository includes two shell scripts to build and run this image: `build_image.sh` and `run_container.sh`
