@@ -1,4 +1,4 @@
-# https://cloud.docker.com/repository/registry-1.docker.io/greglinscheid/polynote
+# https://hub.docker.com/r/greglinscheid/polynote
 
 ## polynote
 
