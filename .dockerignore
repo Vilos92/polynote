@@ -1,0 +1,9 @@
+# git
+.git
+
+# editors
+.vscode
+.swp
+
+# misc
+.DS_Store
