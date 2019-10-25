@@ -8,7 +8,7 @@ The base image is alpine to reduce size. matplotlib is compiled and included as 
 
 ## Usage
 
-When running this image, expose port `8193` to access the web application.
+When running this image, expose port `8193` to access the web application at: http://localhost:8193/
 
 **Example**: `docker run -p 8193:8193 --name=polynote -d -t greglinscheid/polynote:latest`
 
