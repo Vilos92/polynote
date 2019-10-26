@@ -5,7 +5,7 @@ WORKDIR /usr/src/app
 
 ENV JAVA_HOME /usr/lib/jvm/java-1.8-openjdk
 
-# bash and socat are needed to run the polynote script
+# bash is needed to run the polynote script
 RUN apk add --no-cache bash
 
 # Install OpenJDK
