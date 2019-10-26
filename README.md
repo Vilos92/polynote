@@ -1,4 +1,5 @@
-# https://hub.docker.com/r/greglinscheid/polynote
+# [Dockerhub Repo](https://hub.docker.com/r/greglinscheid/polynote)
+# [Official Polynote GitHub Repo](https://github.com/polynote/polynote).
 
 ## polynote
 
@@ -7,8 +8,6 @@
 This is an unofficial Docker image for Netflix's recently open sourced [polynote](https://polynote.org/).
 
 The base image is alpine to reduce size. matplotlib is compiled and included as well.
-
-I'm just doing this for fun, here is the [official Polynote GitHub repo](https://github.com/polynote/polynote).
 
 ## Usage
 
