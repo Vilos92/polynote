@@ -28,7 +28,7 @@ To add more packages, you can `exec` into the running container and install them
 
 ```
 docker exec -it polynote /bin/ash
-pip3 install --no-cache requests
+pip3 install requests
 ```
 
 For the above example, `requests` will be available without needing to restart the container.
@@ -38,5 +38,5 @@ For a solution which persists containers, it is recommended to create your own d
 ```
 FROM greglinscheid/polynote:latest
 ...
-RUN pip3 install --nocache requests
+RUN pip3 install requests
 ```
