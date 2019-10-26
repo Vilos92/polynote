@@ -24,11 +24,16 @@ For convenience, this repository includes two shell scripts to build and run thi
 
 To add more packages, you can `exec` into the running container and install them.
 
-**Python Example**: `pip3 install --no-cache requests`
+**Python Example**: 
+
+```
+docker exec -it polynote /bin/ash
+pip3 install --no-cache requests
+```
 
 For the above example, `requests` will be available without needing to restart the container.
 
-For a solution which persists containers, it is recommended to create your own docker image. Here is one way to do so:
+For a solution which persists containers, it is recommended to create your own docker image:
 
 ```
 FROM greglinscheid/polynote:latest
