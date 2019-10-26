@@ -1,5 +1,5 @@
 # [Dockerhub Repo](https://hub.docker.com/r/greglinscheid/polynote)
-# [Official Polynote GitHub Repo](https://github.com/polynote/polynote).
+# [Official Polynote GitHub Repo](https://github.com/polynote/polynote)
 
 ## polynote
 
