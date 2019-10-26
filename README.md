@@ -2,6 +2,8 @@
 
 ## polynote
 
+![Running Polynote Container](/example.png?raw=true "Running Polynote Container")
+
 This is an unofficial Docker image for Netflix's recently open sourced [polynote](https://polynote.org/).
 
 The base image is alpine to reduce size. matplotlib is compiled and included as well.
