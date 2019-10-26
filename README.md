@@ -19,3 +19,19 @@ If you would like to mount a persistent volume for your notebooks, include the `
 **Example**: `docker run -p 8192:8192 -v poly-notes:/usr/src/app/polynote/notebooks --name=polynote -d -t greglinscheid/polynote:latest`
 
 For convenience, this repository includes two shell scripts to build and run this image: `build_image.sh` and `run_container.sh`
+
+## Adding more packages
+
+To add more packages, you can `exec` into the running container and install them.
+
+**Python Example**: `pip3 install --no-cache requests`
+
+For the above example, `requests` will be available without needing to restart the container.
+
+For a solution which persists containers, it is recommended to create your own docker image. Here is one way to do so:
+
+```
+FROM greglinscheid/polynote:latest
+...
+RUN pip3 install --nocache requests
+```
