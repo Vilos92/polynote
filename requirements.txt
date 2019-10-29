@@ -1,0 +1,14 @@
+cycler==0.10.0
+jedi==0.15.1
+jep==3.9.0
+kiwisolver==1.1.0
+matplotlib==3.1.1
+numpy==1.17.3
+parso==0.5.1
+Pillow==6.2.1
+py4j==0.10.7
+pyparsing==2.4.2
+pyspark==2.4.4
+python-dateutil==2.8.0
+six==1.12.0
+virtualenv==16.7.7

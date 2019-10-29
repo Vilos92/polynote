@@ -26,12 +26,14 @@ RUN set -e; \
     libxml2-dev \
     libxslt-dev \
     zlib-dev \
+    jpeg-dev \
   ;
 
 # Install Python and dependencies
 ENV PYTHONUNBUFFERED=1
+COPY requirements.txt ./requirements.txt
 RUN apk add python3-dev \
-  & pip3 install jep jedi pyspark virtualenv matplotlib
+  & pip3 install -r requirements.txt
 
 # Download and extract polynote
 RUN apk add --no-cache curl
