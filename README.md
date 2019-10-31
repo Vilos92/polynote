@@ -72,7 +72,7 @@ To build an image with opencv dependencies already installed, execute:
 
 To run the opencv container and map the notebook directory to `$HOME/poly-notes`, execute:
 
-`sh build_opencv_image.sh`
+`sh run_opencv_image.sh`
 
 
 ## Links
