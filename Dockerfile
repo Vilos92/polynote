@@ -37,7 +37,7 @@ RUN apk add python3-dev \
 
 # Download and extract polynote
 RUN apk add --no-cache curl
-RUN curl -L https://github.com/polynote/polynote/releases/download/0.2.10/polynote-dist.tar.gz \
+RUN curl -L https://github.com/polynote/polynote/releases/download/0.2.11/polynote-dist.tar.gz \
   | tar -xzvpf -
 
 COPY config.yml ./polynote/config.yml
