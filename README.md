@@ -10,6 +10,8 @@ The base image is alpine to reduce size. For convenience, the following Python l
 - [PIL](https://pillow.readthedocs.io/en/stable/) for displaying images.
 - [matplotlib](https://matplotlib.org/) for plotting data and rendering charts.
 
+There is an additional Dockerfile, **Dockerfile.opencv**, which can be used to build a docker image with opencv dependencies already installed. You can pull these images by using the `opencv` tag.
+
 ## Usage
 When running this image, expose port `8192` to access the web application at: http://localhost:8192/
 
@@ -18,6 +20,10 @@ When running this image, expose port `8192` to access the web application at: ht
 If you would like to mount a persistent volume for your notebooks, include the `-v` flag. The following example will mount the container's `notebooks/` directory to `$HOME/poly-notes`
 
 **Example**: `docker run -p 8192:8192 -v $HOME/poly-notes:/usr/src/app/polynote/notebooks --name=polynote -d -t greglinscheid/polynote:latest`
+
+If you would like to include opencv dependencies in your container, use the `opencv` tag instead:
+
+**Example**: `docker run -p 8192:8192 -v $HOME/poly-notes:/usr/src/app/polynote/notebooks --name=polynote -d -t greglinscheid/polynote:opencv`
 
 ## Adding more packages
 To add more packages, you can `exec` into the running container and install them.
@@ -46,7 +52,11 @@ RUN pip3 install requests
 ```
 
 ## Scripts
-For convenience, this repository includes two shell scripts to build and run this image: `build_image.sh` and `run_container.sh`
+For convenience, this repository includes shell scripts for building and running this image:
+- `build_image.sh`
+- `run_container.sh`
+- `build_opencv_image.sh`
+- `run_opencv_container.sh`
 
 To build an image from the current repository, execute:
 
@@ -55,6 +65,15 @@ To build an image from the current repository, execute:
 To run the container and map the notebook directory to `$HOME/poly-notes`, execute:
 
 `sh run_container.sh`
+
+To build an image with opencv dependencies already installed, execute:
+
+`sh build_opencv_image.sh`
+
+To run the opencv container and map the notebook directory to `$HOME/poly-notes`, execute:
+
+`sh build_opencv_image.sh`
+
 
 ## Links
 - [Polynote's Home](https://polynote.org/).
