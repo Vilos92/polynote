@@ -33,7 +33,8 @@ RUN set -e; \
 ENV PYTHONUNBUFFERED=1
 COPY requirements.txt ./requirements.txt
 RUN apk add python3-dev \
-  & pip3 install -r requirements.txt
+  && pip3 install --upgrade pip \
+  && pip3 install -r requirements.txt
 
 # Download and extract polynote
 ARG POLYNOTE_VERSION=0.2.11
