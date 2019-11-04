@@ -1,5 +1,5 @@
 #!/bin/sh
-if [[ "$(docker images -q greglinscheid/polynote:latest 2> /dev/null)" == "" ]]; then
+if [[ "$(docker images -q greglinscheid/polynote:opencv 2> /dev/null)" == "" ]]; then
   source build_image.sh
 fi
 
