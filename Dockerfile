@@ -37,7 +37,7 @@ RUN apk add python3-dev \
   && pip3 install -r requirements.txt
 
 # Download and extract polynote
-ARG POLYNOTE_VERSION=0.2.13
+ARG POLYNOTE_VERSION=0.2.14
 RUN curl -L https://github.com/polynote/polynote/releases/download/${POLYNOTE_VERSION}/polynote-dist.tar.gz \
   | tar -xzvpf -
 
