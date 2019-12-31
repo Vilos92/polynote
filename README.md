@@ -1,5 +1,5 @@
 # [Dockerhub Repo](https://hub.docker.com/r/greglinscheid/polynote)
-# [Official Polynote GitHub Repo](https://github.com/polynote/polynote) - [Release: 0.2.14](https://github.com/polynote/polynote/releases/tag/0.2.14)
+# [Official Polynote GitHub Repo](https://github.com/polynote/polynote) - [Release: 0.2.15](https://github.com/polynote/polynote/releases/tag/0.2.15)
 
 ## polynote
 ![Running Polynote Container](https://github.com/Vilos92/polynote/raw/master/example.png?raw=true?raw=true "Running Polynote Container")
