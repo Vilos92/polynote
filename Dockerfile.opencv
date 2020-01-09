@@ -109,7 +109,7 @@ apk del --purge build-base clang clang-dev cmake pkgconf wget openblas-dev \
   rm -vrf /var/cache/apk/*
 
 # Download and extract polynote
-ARG POLYNOTE_VERSION=0.2.15
+ARG POLYNOTE_VERSION=0.2.16
 RUN curl -L https://github.com/polynote/polynote/releases/download/${POLYNOTE_VERSION}/polynote-dist.tar.gz \
   | tar -xzvpf -
 
